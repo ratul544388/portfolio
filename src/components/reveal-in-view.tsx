@@ -16,7 +16,7 @@ interface RevealInViewProps {
 export const RevealInView = ({
   children,
   delay = 0,
-  y = 100,
+  y = 50,
   x = 0,
   scale = 1,
   className,

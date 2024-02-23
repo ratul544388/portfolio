@@ -30,6 +30,8 @@ export const myFacebookLink = "https://www.facebook.com/ratul544388";
 export const myEmail = "ratulislam544388@gmail.com";
 export const myAddress = "Keranigonj Dhaka 1310, Bangladesh";
 export const myPhone = "+8801815555105";
+export const nextJsUrl = "https://nextjs.org/";
+export const reactUrl = "https://react.dev/";
 
 export const navItems = [
   {

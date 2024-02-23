@@ -16,7 +16,7 @@ export const SectionHeading = ({
   className,
 }: SectionHeadingProps) => {
   return (
-    <RevealInView delay={delay} y={100}>
+    <RevealInView delay={delay}>
       <h2 className={cn("text-3xl font-medium capitalize", className)}>
         {children}
       </h2>
