@@ -16,8 +16,8 @@ export const About = ({}: AboutProps) => {
       id="about"
       className="flex flex-col gap-8 items-center scroll-mt-32"
     >
-      <SectionHeading delay={0.5}>About</SectionHeading>
-      <RevealInView delay={0.7} y={100}>
+      <SectionHeading>About</SectionHeading>
+      <RevealInView y={100}>
         <p className="text-center">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
           voluptate corporis blanditiis sit aspernatur recusandae. Corporis

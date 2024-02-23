@@ -60,18 +60,22 @@ export const Intro = () => {
         </RevealInView>
         <RevealInView y={0} x={-100} delay={0.6}>
           <div className="flex items-center gap-3 mt-5">
-            <Button className="gap-2 group">
+            <MotionLink
+              href="#contact"
+              className={cn(buttonVariants(), "gap-2 group")}
+            >
               Contact me
               <FaLongArrowAltRight className="h-4 w-4 group-hover:translate-x-1 transition" />
-            </Button>
+            </MotionLink>
             <MotionLink
-              href="/"
+              href="/resume.pdf"
               className={cn(
                 buttonVariants({ variant: "secondary" }),
                 "relative overflow-hidden gap-2 hover:text-white group"
               )}
               initial="hidden"
               whileHover="visible"
+              download={true}
             >
               <span className="z-10">Download CV</span>
               <MdOutlineFileDownload className="z-10 h-4 w-4 group-hover:translate-y-1 transition" />

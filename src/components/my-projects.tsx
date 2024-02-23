@@ -10,7 +10,7 @@ export const MyProjects = ({}: MyProjectsProps) => {
   return (
     <section
       id="projects"
-      className="flex flex-col gap-8 drop-shadow-lg gap-6 items-center max-w-screen-sm scroll-mt-32"
+      className="flex flex-col gap-8 drop-shadow-lg items-center max-w-screen-sm scroll-mt-32"
     >
       <SectionHeading>My projects</SectionHeading>
       {projects.map((project, index) => (

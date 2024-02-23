@@ -18,6 +18,8 @@ interface ProjectProps {
   image: StaticImageData;
   tags: string[];
   index: number;
+  githubLink: string;
+  deployedLink: string;
 }
 
 export const Project = ({
@@ -26,6 +28,8 @@ export const Project = ({
   image,
   tags,
   index,
+  githubLink,
+  deployedLink,
 }: ProjectProps) => {
   const animation = useAnimation();
   const { width } = useWindowSize();
@@ -81,13 +85,13 @@ export const Project = ({
       >
         <Link
           className={cn(buttonVariants({ size: "icon" }))}
-          href={"github"}
+          href={githubLink}
         >
           <FaGithub className="h-4 w-4" />
         </Link>
         <Link
           className={cn(buttonVariants({ size: "icon" }))}
-          href={"github"}
+          href={deployedLink}
         >
           <ImEarth className="h-4 w-4" />
         </Link>
