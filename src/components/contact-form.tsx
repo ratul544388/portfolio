@@ -23,7 +23,7 @@ import { toast } from "react-toastify";
 
 export const ContactForm = () => {
   const [isPending, startTransition] = useTransition();
-  const FramerButton = motion(Button);
+  const MotionButton = motion(Button);
   const form = useForm<z.infer<typeof ContactSchema>>({
     resolver: zodResolver(ContactSchema),
     defaultValues: {
@@ -88,10 +88,15 @@ export const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button variant="blue" className="ml-auto" disabled={isPending}>
+        <MotionButton
+          whileHover={{ scale: 1.05 }}
+          variant="gradient"
+          className="ml-auto"
+          disabled={isPending}
+        >
           Submit
           <IoMdSend className="h-4 w-4 ml-2" />
-        </Button>
+        </MotionButton>
       </form>
     </Form>
   );

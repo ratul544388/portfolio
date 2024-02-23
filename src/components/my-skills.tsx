@@ -19,7 +19,7 @@ export const MySkills = () => {
           <RevealInView
             key={item}
             delay={0.05 * index}
-            y={30}
+            y={50}
             className="px-3 py-0.5 text-sm bg-white shadow-md font-medium border rounded-full"
           >
             {item}

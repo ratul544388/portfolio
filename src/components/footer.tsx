@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className="mt-20">
       <div className="bg-slate-50 shadow-[0_-3px_10px_rgba(0,0,0,0.2)] flex flex-col items-center gap-2 py-8 px-5">
         <nav className="flex mt-1">
-          {socialIcons.map((icon, i) => (
+          {socialIcons.map(({icon: Icon, href}, i) => (
             <MotionLink
               target="_blank"
               whileTap={{
@@ -19,13 +19,13 @@ export const Footer = () => {
               }}
               key={i}
               className="p-2 text-theme"
-              href={icon.href}
+              href={href}
               whileHover={{
                 scale: 1.05,
                 y: -4,
               }}
             >
-              <icon.name className="h-5 w-5" />
+              <Icon className="h-5 w-5" />
             </MotionLink>
           ))}
         </nav>

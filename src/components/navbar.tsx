@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100, left: "50%", translateX: "-50%" }}
+      initial={{ y: -120, left: "50%", translateX: "-50%" }}
       animate={{ opacity: 1, y: 0 }}
       className="fixed top-3 opacity-0 z-50 hidden sm:flex bg-background/80 backdrop-blur-sm border shadow-md py-2 px-3 rounded-full"
     >
@@ -28,14 +28,14 @@ export const Navbar = () => {
             key={label}
             className={cn(
               "relative px-3 py-1 font-medium text-gray-600 hover:text-foreground transition-colors",
-              isActive && "text-foreground"
+              isActive && "text-white hover:text-white"
             )}
           >
             {label}
             {isActive && (
               <motion.span
                 layoutId="activeSection"
-                className="absolute -z-10 inset-0 lite_gradient rounded-full"
+                className="absolute -z-10 inset-0 bg-gradient-to-r from from-indigo-500 via to-purple-500 rounded-full"
               />
             )}
           </Link>

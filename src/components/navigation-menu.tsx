@@ -56,7 +56,7 @@ export const NavigationMenu = () => {
               key={label}
               className={cn(
                 "bg-slate-100 rounded-full font-medium shadow-md flex",
-                activeSection === label && "bg-blue-600 text-white"
+                activeSection === label && "gradient"
               )}
             >
               <Link
@@ -77,11 +77,11 @@ export const NavigationMenu = () => {
       <Button
         onClick={() => setOpen(!open)}
         className={cn(
-          "z-[100] h-12 w-12 shadow-lg hover:bg-slate-100",
-          open && "hover:bg-neutral-800"
+          "z-[100] h-12 w-12 shadow-lg",
+          // open && "hover:bg-neutral-800"
         )}
         size="icon"
-        variant={open ? "default" : "secondary"}
+        variant={open ? "gradient" : "secondary"}
       >
         <HiMenuAlt3 className="h-8 w-8" />
       </Button>

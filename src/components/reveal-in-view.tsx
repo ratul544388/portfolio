@@ -8,29 +8,29 @@ interface RevealInViewProps {
   children?: ReactNode;
   delay?: number;
   y?: number;
+  x?: number;
   scale?: number;
   className?: string;
-  type?: "tween" | "spring";
 }
 
 export const RevealInView = ({
   children,
   delay = 0,
-  y = 50,
+  y = 100,
+  x = 0,
   scale = 1,
   className,
-  type = "spring",
 }: RevealInViewProps) => {
   return (
     <motion.div
       className={cn(className)}
       variants={{
-        hidden: { opacity: 0, y, scale },
-        visible: { opacity: 1, y: 0, scale: 1 },
+        hidden: { opacity: 0, y, scale, x },
+        visible: { opacity: 1, y: 0, scale: 1, x: 0 },
       }}
       transition={{
         delay,
-        type,
+        type: "spring",
       }}
       initial="hidden"
       whileInView="visible"

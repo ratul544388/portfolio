@@ -16,7 +16,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           type={type}
           className={cn(
-            "flex h-12 w-full peer rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50",
+            "flex h-12 w-full peer rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50",
             className
           )}
           ref={ref}
@@ -25,7 +25,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <span
             className={cn(
-              "pointer-events-none px-2 absolute top-1/2 left-1 rounded-full -translate-y-1/2 text-sm text-muted-foreground peer-focus:top-[-2px] bg-accent transition-all border-x-transparent peer-focus:border-x-[1.5px] peer-focus:border-blue-500",
+              "pointer-events-none px-2 absolute top-1/2 left-1 rounded-full -translate-y-1/2 text-sm text-muted-foreground peer-focus:top-[-2px] bg-accent transition-all border-x-transparent peer-focus:border-x-[1.5px] peer-focus:border-primary",
               value && "top-[-2px] border-x-[1.5px] border-x-theme"
             )}
           >

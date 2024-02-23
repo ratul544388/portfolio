@@ -53,7 +53,10 @@ export const TimelineItem = ({
             animate: {
               x: 0,
               opacity: 1,
-              transition: { delay: 0.2, type: "spring" },
+              transition: {
+                type: "spring",
+                delay: 0.2,
+              },
             },
           }}
           initial="initial"
@@ -64,7 +67,7 @@ export const TimelineItem = ({
           <h3 className="font-semibold text-lg">{title}</h3>
           <p className="font-medium">{location}</p>
           <p className="text-muted-foreground mt-2">{description}</p>
-          <p className="sm:hidden mt-3 text-sm text-muted-foreground">{date}</p>
+          <p className="md:hidden mt-3 text-sm text-muted-foreground">{date}</p>
           <span
             className={cn(
               "absolute bg-background h-4 w-4 rotate-45 right-[100%] md:right-0 translate-x-1/2 shadow-lg -z-10",
@@ -79,7 +82,7 @@ export const TimelineItem = ({
           />
         </motion.div>
       </div>
-      <div className="flex flex-col items-center min-w-[90px]">
+      <div className="flex flex-col items-center mr-5 md:mr-0 md:min-w-[90px]">
         <div className="flex items-center justify-center min-h-12 min-w-12 bg-background shadow-md rounded-full">
           <Icon className="h-5 w-5" />
         </div>
