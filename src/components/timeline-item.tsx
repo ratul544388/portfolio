@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { ease } from "@/constants";
 
 interface TimelineItemProps {
   title: string;
@@ -49,12 +50,12 @@ export const TimelineItem = ({
       >
         <motion.div
           variants={{
-            initial: even || width <= 720 ? { x: 150 } : { x: -200 },
+            initial: even || width <= 720 ? { x: 50 } : { x: -50 },
             animate: {
               x: 0,
               opacity: 1,
               transition: {
-                type: "spring",
+                ease,
                 delay: 0.2,
               },
             },

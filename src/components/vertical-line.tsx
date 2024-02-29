@@ -10,7 +10,7 @@ interface VerticalLineProps {
 
 export const VerticalLine = ({ className, delay }: VerticalLineProps) => {
   return (
-    <RevealInView delay={delay}>
+    <RevealInView delay={delay} y={50}>
       <Separator
         className="h-[50px] w-[2px] bg-blue-300/50"
         orientation="vertical"

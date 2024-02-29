@@ -17,7 +17,7 @@ export const About = ({}: AboutProps) => {
       className="flex flex-col gap-8 items-center scroll-mt-32"
     >
       <SectionHeading>About</SectionHeading>
-      <RevealInView className="flex flex-col items-center gap-4">
+      <RevealInView y={50} className="flex flex-col items-center gap-4">
         <p>
           Hello! <span className="font-semibold">I&apos;m Ratul Hossain</span>,
           a <span className="font-semibold">24-year-old</span>{" "}

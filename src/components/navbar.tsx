@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/constants";
+import { ease, navItems } from "@/constants";
 import { useActiveSectionStore } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -13,7 +13,7 @@ export const Navbar = () => {
   return (
     <motion.nav
       initial={{ y: -120, left: "50%", translateX: "-50%" }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0, transition: { ease } }}
       className="fixed top-3 opacity-0 z-50 hidden sm:flex bg-background/80 backdrop-blur-sm border shadow-md py-2 px-3 rounded-full"
     >
       {navItems.map(({ label, href }) => {

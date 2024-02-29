@@ -18,14 +18,14 @@ export const Contact = () => {
       className="flex flex-col h-full items-center scroll-mt-28"
     >
       <SectionHeading>Contact me</SectionHeading>
-      <RevealInView className="text-sm text-muted-foreground mt-2">
+      <RevealInView y={50} className="text-sm text-muted-foreground mt-2">
         Contact me directly at{" "}
         <Link className="text-foreground underline" href={`mailto:${myEmail}`}>
           {myEmail}
         </Link>{" "}
         or through this form.
       </RevealInView>
-      <RevealInView className="mt-8 w-full">
+      <RevealInView y={50} className="mt-8 w-full">
         <ContactForm />
       </RevealInView>
     </section>

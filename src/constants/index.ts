@@ -266,4 +266,4 @@ export const socialIcons = [
   },
 ];
 
-export const ease = [0.32, 0, 0.67, 0];
+export const ease = [0.37, 0, 0.63, 1];

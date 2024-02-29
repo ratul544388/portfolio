@@ -26,13 +26,14 @@ export const MobileNavbar = () => {
         scrollY >= 100 && "bg-neutral-900/10 backdrop-blur-md"
       )}
     >
-      <RevealInView
-        y={-50}
-        className="flex h-full items-center justify-between px-5"
-      >
-        <Logo />
-        <NavigationMenu />
-      </RevealInView>
+      <div className="flex h-full items-center justify-between px-5">
+        <RevealInView y={-50} x={-50}>
+          <Logo />
+        </RevealInView>
+        <RevealInView y={-50} x={50}>
+          <NavigationMenu />
+        </RevealInView>
+      </div>
     </nav>
   );
 };

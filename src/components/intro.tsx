@@ -2,16 +2,16 @@
 
 import DeveloperImage from "@/../public/images/developer.png";
 import ShapeImage from "@/../public/images/hero-shape.png";
-import { ease, socialIcons } from "@/constants";
+import { socialIcons } from "@/constants";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
-import { Button, buttonVariants } from "./ui/button";
 import { RevealInView } from "./reveal-in-view";
+import { buttonVariants } from "./ui/button";
 
 export const Intro = () => {
   const { ref } = useScroll({
@@ -19,23 +19,27 @@ export const Intro = () => {
     threshold: 0,
   });
   const MotionLink = motion(Link);
-  const animation = useAnimation();
   return (
     <section
       ref={ref}
       id="home"
-      className="max-w-screen-lg flex flex-col-reverse items-center md:items-start md:flex-row mt-[150px] scroll-mt-28"
+      className="max-w-screen-lg flex flex-col-reverse items-center md:items-start md:flex-row mt-[120px] scroll-mt-28"
     >
       <div className="flex flex-col">
-        <RevealInView>
-          <h3 className="font-light tracking-widest">WEB DEVELOPER</h3>
+        <RevealInView x={-200}>
+          <h4 className="font-light tracking-widest">WEB DEVELOPER</h4>
         </RevealInView>
-        <RevealInView y={0} x={-100} delay={0.2}>
+        <RevealInView x={-200}>
           <h1 className="font-extrabold leading-[50px] text-4xl mt-3 text-primary">
-            Hello, My name is <br /> Ratul Hossain
+            Hello, My name is,
           </h1>
         </RevealInView>
-        <RevealInView y={0} x={-100} delay={0.4}>
+        <RevealInView y={-70} delay={0.3}>
+          <h1 className="font-extrabold leading-[50px] text-4xl text-primary">
+            Ratul Hossain
+          </h1>
+        </RevealInView>
+        <RevealInView x={-100} delay={0.5}>
           <p className="mt-2">
             I&apos;m a{" "}
             <span className="font-bold">Full Stack Web Developer </span>
@@ -58,8 +62,8 @@ export const Intro = () => {
             dadicated to building outstanding digital solutions.
           </p>
         </RevealInView>
-        <RevealInView y={0} x={-100} delay={0.6}>
-          <div className="flex items-center gap-3 mt-5">
+        <div className="flex items-center gap-3 mt-5">
+          <RevealInView delay={0.6} x={-100}>
             <MotionLink
               href="#contact"
               className={cn(buttonVariants(), "gap-2 group")}
@@ -67,6 +71,8 @@ export const Intro = () => {
               Contact me
               <FaLongArrowAltRight className="h-4 w-4 group-hover:translate-x-1 transition" />
             </MotionLink>
+          </RevealInView>
+          <RevealInView delay={0.6} x={100}>
             <MotionLink
               href="/resume.pdf"
               className={cn(
@@ -85,11 +91,16 @@ export const Intro = () => {
                 className="absolute inset-0 bg-neutral-900 rounded-full"
               />
             </MotionLink>
-          </div>
-        </RevealInView>
-        <RevealInView y={0} x={-100} delay={0.8}>
-          <div className="mt-4 flex gap-3">
-            {socialIcons.map(({ icon: Icon, href }, index) => (
+          </RevealInView>
+        </div>
+        <div className="mt-4 flex gap-3">
+          {socialIcons.map(({ icon: Icon, href }, index) => (
+            <RevealInView
+              x={-50}
+              scale={0}
+              key={index}
+              delay={0.3 * index + 0.8}
+            >
               <MotionLink
                 className={cn(
                   buttonVariants({ size: "icon", variant: "secondary" }),
@@ -110,14 +121,11 @@ export const Intro = () => {
                   className="absolute inset-0 bg-primary rounded-full"
                 />
               </MotionLink>
-            ))}
-          </div>
-        </RevealInView>
+            </RevealInView>
+          ))}
+        </div>
       </div>
-      <motion.div
-        animate={{ opacity: 1, x: [200, 0], transition: { type: "spring" } }}
-        className="relative opacity-0"
-      >
+      <RevealInView scale={0} className="relative">
         <div className="relative w-[180px] md:w-[360px] aspect-[7/6]">
           <Image
             src={ShapeImage}
@@ -134,7 +142,7 @@ export const Intro = () => {
             className="object-cover"
           />
         </div>
-      </motion.div>
+      </RevealInView>
     </section>
   );
 };
