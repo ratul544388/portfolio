@@ -96,10 +96,10 @@ export const Intro = () => {
         <div className="mt-4 flex gap-3">
           {socialIcons.map(({ icon: Icon, href }, index) => (
             <RevealInView
-              x={-50}
+              x={-30}
               scale={0}
               key={index}
-              delay={0.3 * index + 0.8}
+              delay={0.15 * index + 0.8}
             >
               <MotionLink
                 className={cn(

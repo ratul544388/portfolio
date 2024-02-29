@@ -27,10 +27,10 @@ export const MobileNavbar = () => {
       )}
     >
       <div className="flex h-full items-center justify-between px-5">
-        <RevealInView y={-50} x={-50}>
+        <RevealInView y={-50} x={-50} delay={0.5}>
           <Logo />
         </RevealInView>
-        <RevealInView y={-50} x={50}>
+        <RevealInView y={-50} x={50} delay={0.5}>
           <NavigationMenu />
         </RevealInView>
       </div>
